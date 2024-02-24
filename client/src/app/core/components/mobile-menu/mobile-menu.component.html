@@ -1,0 +1,48 @@
+<div
+  class="block md:hidden bg-white dark:bg-gray-800 w-full sticky bottom-0 z-[999]"
+>
+  <ul class="grid grid-cols-4 border-t border-blue-500 dark:border-rose-500">
+    <li
+      (click)="activeIndex = 0"
+      class="flex justify-center items-center py-3"
+      [class.bg-blue-500]="activeIndex == 0"
+      [class.dark:bg-rose-500]="activeIndex == 0"
+    >
+      <i
+        [class.text-white]="activeIndex == 0"
+        class="pi pi-home dark:text-white"
+        style="font-size: 1rem"
+      ></i>
+    </li>
+    <li
+      (click)="activeIndex = 1"
+      [class.bg-blue-500]="activeIndex == 1"
+      [class.dark:bg-rose-500]="activeIndex == 1"
+      class="flex justify-center items-center py-3"
+    >
+      <i
+        [class.text-white]="activeIndex == 1"
+        class="pi pi-info dark:text-white"
+        style="font-size: 1rem"
+      ></i>
+    </li>
+    <li
+      (click)="activeIndex = 2"
+      [class.bg-blue-500]="activeIndex == 2"
+      [class.dark:bg-rose-500]="activeIndex == 2"
+      class="flex justify-center items-center py-3"
+    >
+      <i
+        [class.text-white]="activeIndex == 2"
+        class="pi pi-envelope dark:text-white"
+        style="font-size: 1rem"
+      ></i>
+    </li>
+    <li (click)="openMenu()" class="flex justify-center items-center py-3">
+      <i
+        class="pi {{ isOpened ? 'pi-times' : 'pi-bars' }}  dark:text-white"
+        style="font-size: 1rem"
+      ></i>
+    </li>
+  </ul>
+</div>

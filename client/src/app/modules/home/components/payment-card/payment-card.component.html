@@ -1,0 +1,251 @@
+<div class="flex justify-center px-2 md:px-0">
+  <div
+    class="grid grid-cols-3 w-full md:w-1/3 lg:w-1/3 border-[2px] border-blue-400 dark:border-rose-500"
+  >
+    <div class="">
+      <button
+        (click)="activeIndex = 0"
+        [ngClass]="{
+          'bg-blue-400 text-white dark:bg-rose-500': activeIndex == 0
+        }"
+        class="w-full h-full py-3"
+      >
+        Basic
+      </button>
+    </div>
+    <div class="">
+      <button
+        (click)="activeIndex = 1"
+        [ngClass]="{
+          'bg-blue-400 text-white dark:bg-rose-500': activeIndex == 1
+        }"
+        class="w-full h-full py-3"
+      >
+        Premium
+      </button>
+    </div>
+    <div class="">
+      <button
+        (click)="activeIndex = 2"
+        [ngClass]="{
+          'bg-blue-400 text-white dark:bg-rose-500': activeIndex == 2
+        }"
+        class="w-full h-full py-3"
+      >
+        Special
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper w-full flex m-auto mt-10 justify-center px-2 md:px-0">
+  <div
+    *ngIf="activeIndex == 0"
+    class="table basic w-full md:w-1/2 lg:w-1/3 border dark:border-rose-500 dark:border-[2px] p-8 shadow-lg rounded-xl"
+  >
+    <div class="price-section flex justify-center">
+      <div
+        class="price-area h-32 w-32 bg-blue-400 dark:bg-rose-500 rounded-full p-[2px]"
+      >
+        <div
+          class="relative inner-area h-full w-full bg-blue-400 dark:bg-rose-500 rounded-full border-[3px] border-white text-white flex justify-center items-center"
+        >
+          <span
+            class="absolute text-6xl -left-10 top-0 text-blue-500 dark:text-rose-500"
+          >
+            &#8364;</span
+          >
+          <span class="text-4xl">29</span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="package-name relative w-full h-[2px] bg-blue-400 dark:bg-rose-500 my-8 before:content-['Basic'] before:absolute before:left-[50%] before:top-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:bg-white dark:before:bg-gray-800 before:text-2xl before:px-5"
+    ></div>
+    <ul class="features flex flex-col gap-4">
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #1</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #1</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #1</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #1</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #1</span>
+        <span class="list-name"
+          ><i class="pi pi-times text-rose-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #1</span>
+        <span class="list-name"
+          ><i class="pi pi-times text-rose-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+    </ul>
+    <div class="flex justify-center mt-10">
+      <button
+        class="py-3 px-11 flex justify-center items-center uppercase text-white shadow rounded transition ease-in-out delay-150 bg-gradient-to-r hover:bg-gradient-to-l from-blue-400 to-blue-700 dark:from-rose-400 dark:to-rose-700"
+      >
+        Purchase
+      </button>
+    </div>
+  </div>
+
+  <div
+    *ngIf="activeIndex == 1"
+    class="table basic w-full md:w-1/2 lg:w-1/3 border dark:border-rose-500 dark:border-[2px] p-8 shadow-lg rounded-xl"
+  >
+    <div class="price-section flex justify-center">
+      <div
+        class="price-area h-32 w-32 bg-blue-400 dark:bg-rose-500 rounded-full p-[2px]"
+      >
+        <div
+          class="relative inner-area h-full w-full bg-blue-400 dark:bg-rose-500 rounded-full border-[3px] border-white text-white flex justify-center items-center"
+        >
+          <span
+            class="absolute text-6xl -left-10 top-0 text-blue-500 dark:text-rose-500"
+          >
+            &#8364;</span
+          >
+          <span class="text-4xl">99</span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="package-name relative w-full h-[2px] bg-blue-400 dark:bg-rose-500 my-8 before:content-['Premium'] before:absolute before:left-[50%] before:top-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:bg-white dark:before:bg-gray-800 before:text-2xl before:px-5"
+    ></div>
+    <ul class="features flex flex-col gap-4">
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #2</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #2</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #2</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #2</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #2</span>
+        <span class="list-name"
+          ><i class="pi pi-times text-rose-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #2</span>
+        <span class="list-name"
+          ><i class="pi pi-times text-rose-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+    </ul>
+    <div class="flex justify-center mt-10">
+      <button
+        class="py-3 px-11 flex justify-center items-center uppercase text-white shadow rounded transition ease-in-out delay-150 bg-gradient-to-r hover:bg-gradient-to-l from-blue-400 to-blue-700 dark:from-rose-400 dark:to-rose-700"
+      >
+        Purchase
+      </button>
+    </div>
+  </div>
+
+  <div
+    *ngIf="activeIndex == 2"
+    class="table basic w-full md:w-1/2 lg:w-1/3 border dark:border-rose-500 dark:border-[2px] p-8 shadow-lg rounded-xl"
+  >
+    <div class="price-section flex justify-center">
+      <div
+        class="price-area h-32 w-32 bg-blue-400 dark:bg-rose-500 rounded-full p-[2px]"
+      >
+        <div
+          class="relative inner-area h-full w-full bg-blue-400 dark:bg-rose-500 rounded-full border-[3px] border-white text-white flex justify-center items-center"
+        >
+          <span
+            class="absolute text-6xl -left-10 top-0 text-blue-500 dark:text-rose-500"
+          >
+            &#8364;</span
+          >
+          <span class="text-4xl">999</span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="package-name relative w-full h-[2px] bg-blue-400 dark:bg-rose-500 my-8 before:content-['Special'] before:absolute before:left-[50%] before:top-[50%] before:-translate-x-1/2 before:-translate-y-1/2 before:bg-white dark:before:bg-gray-800 before:text-2xl before:px-5"
+    ></div>
+    <ul class="features flex flex-col gap-4">
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #3</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #3</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #3</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #3</span>
+        <span class="list-name"
+          ><i class="pi pi-check text-green-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #3</span>
+        <span class="list-name"
+          ><i class="pi pi-times text-rose-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+      <li class="flex justify-between">
+        <span class="list-name">One Selected template #3</span>
+        <span class="list-name"
+          ><i class="pi pi-times text-rose-500" style="font-size: 1rem"></i
+        ></span>
+      </li>
+    </ul>
+    <div class="flex justify-center mt-10">
+      <button
+        class="py-3 px-11 flex justify-center items-center uppercase text-white shadow rounded transition ease-in-out delay-150 bg-gradient-to-r hover:bg-gradient-to-l from-blue-400 to-blue-700 dark:from-rose-400 dark:to-rose-700"
+      >
+        Purchase
+      </button>
+    </div>
+  </div>
+</div>

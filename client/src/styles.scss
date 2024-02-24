@@ -4,3 +4,19 @@
 @tailwind utilities;
 
 @import "primeicons/primeicons.css";
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.info-card {
+    @apply flex flex-col md:flex-row justify-between items-center md:items-start gap-5;
+  }
+
+.info-card__text {
+    @apply flex flex-col justify-center items-center gap-5 order-2 md:order-1 text-center md:text-left;
+}
+
+.info-card__icon {
+    @apply order-1 md:order-2 min-w-28 min-h-28 max-w-28 max-h-28 bg-blue-400 dark:bg-rose-500 rounded-full flex justify-center items-center text-white;
+}

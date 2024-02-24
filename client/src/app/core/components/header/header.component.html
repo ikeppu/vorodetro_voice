@@ -1,10 +1,9 @@
 <header
-  class="flex items-center justify-between bg-blue-400 dark:bg-gray-800 px-5 h-20 shadow-md text-white"
+  class="sticky top-0 z-[9999] md:relative flex items-center justify-between bg-blue-400 dark:bg-gray-800 px-5 h-20 shadow-md text-white"
 >
   <p>LOGO</p>
 
-  <ul class="flex gap-5">
-    <!-- TODO: Add nice hover effect -->
+  <ul class="hidden md:flex gap-5">
     <li class="cursor-pointer">Link_1</li>
     <li class="cursor-pointer">Link_2</li>
     <li class="cursor-pointer">Link_3</li>
@@ -15,7 +14,7 @@
 
   <button
     (click)="changeTheme()"
-    class="bg-green-400 dark:bg-rose-500 text-white rounded h-10 px-4 py-2 outline-none flex justify-center items-center rounded-full"
+    class="bg-green-400 dark:bg-rose-500 text-white h-10 px-4 py-2 outline-none flex justify-center items-center rounded-full"
   >
     <ng-icon class="dark:!hidden" name="matDarkMode"></ng-icon>
     <ng-icon class="!hidden dark:!block" name="matLightMode"></ng-icon>

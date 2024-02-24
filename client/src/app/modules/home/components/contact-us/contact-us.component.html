@@ -1,0 +1,59 @@
+<div class="w-full flex justify-center px-2">
+  <form
+    [formGroup]="contactUsForm"
+    class="w-full md:w-1/2 lg:w-1/3 border dark:border-rose-500 shadow-lg rounded-xl p-8 flex flex-col gap-10"
+  >
+    <p class="text-center text-2xl">Contact us form</p>
+    <div class="">
+      <input
+        formControlName="email"
+        type="email"
+        placeholder="Email"
+        class="border-b placeholder:text-blue-400 dark:placeholder:text-white border-blue-400 dark:border-rose-400 dark:bg-gray-800 w-full p-2 dark:text-white outline-none"
+      />
+    </div>
+    <div class="">
+      <input
+        formControlName="name"
+        type="text"
+        placeholder="Name"
+        class="border-b placeholder:text-blue-400 dark:placeholder:text-white border-blue-400 dark:border-rose-400 dark:bg-gray-800 w-full p-2 dark:text-white outline-none"
+      />
+    </div>
+    <div class="">
+      <input
+        formControlName="surname"
+        type="text"
+        placeholder="Surname"
+        class="border-b placeholder:text-blue-400 dark:placeholder:text-white border-blue-400 dark:border-rose-400 dark:bg-gray-800 w-full p-2 dark:text-white outline-none"
+      />
+    </div>
+    <div class="">
+      <input
+        formControlName="phone"
+        type="text"
+        placeholder="Phone"
+        class="border-b placeholder:text-blue-400 dark:placeholder:text-white border-blue-400 dark:border-rose-400 dark:bg-gray-800 w-full p-2 dark:text-white outline-none"
+      />
+    </div>
+    <div class="">
+      <textarea
+        formControlName="comment"
+        type="text"
+        rows="5"
+        cols="40"
+        placeholder="Comment"
+        class="h-32 placeholder:text-blue-400 border-b dark:placeholder:text-white border-blue-400 dark:border-rose-400 dark:bg-gray-800 w-full p-2 dark:text-white outline-none"
+      ></textarea>
+    </div>
+    <div class="flex justify-center">
+      <button
+        [disabled]="contactUsForm.invalid"
+        (click)="submit()"
+        class="disabled:opacity-60 disabled:cursor-not-allowed outline-none py-3 px-11 flex justify-center items-center uppercase text-white shadow rounded transition ease-in-out delay-150 bg-gradient-to-r hover:bg-gradient-to-l from-blue-400 to-blue-700 dark:from-rose-400 dark:to-rose-700"
+      >
+        Send
+      </button>
+    </div>
+  </form>
+</div>
