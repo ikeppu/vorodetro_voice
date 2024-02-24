@@ -1,0 +1,20 @@
+<div
+  class="w-full bg-blue-300 py-10 rounded-xl flex flex-col items-center min-h-96"
+>
+  <!-- TODO: make it as array and use ngfor -->
+  <div class="w-1/2">
+    <button
+      (click)="isOpen = !isOpen"
+      class="w-full bg-white outline-none cursor-pointer border-none transition-all p-5 text-left flex justify-between items-center"
+    >
+      <span>Question 1</span>
+      <i class="pi {{ isOpen ? 'pi-minus' : 'pi-plus' }}"></i>
+    </button>
+    <div
+      [class.hidden]="!isOpen"
+      class="px-5 py-10 bg-white overflow-hidden border-t"
+    >
+      <p>Lorem ipsum...</p>
+    </div>
+  </div>
+</div>
